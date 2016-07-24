@@ -1,7 +1,7 @@
 # Messaging-Application-Android-Application-Development
 The repository contains an `Instant Messaging Application`, as part of the `Android Application Development` collection that was created as an **independent project**. 
 
-This Instant Messaging Application built on Android platform can allow the users to:
+The **Instant Messaging Application** built on **Android** platform can allow the users to:
 * Chat with an indivudal using text messages.
 * Also, supports chatting with friends in a group using traditional text messaging.
 
