@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/arjunbagla/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-core/2.2.2/d20be6a5ddd6f8cfd36ebf6dea329873a1c41f1b/jackson-core-2.2.2.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="d20be6a5ddd6f8cfd36ebf6dea329873a1c41f1b">
+        <dex dex="/Users/arjunbagla/Downloads/tutorials-master/android/ChatApplication/app/build/intermediates/pre-dexed/debug/jackson-core-2.2.2-4aa0aa399d56869bdde2f17e36a0de38eeb02184.jar" />
+    </item>
+    <item
+        jar="/Users/arjunbagla/.gradle/caches/modules-2/files-2.1/com.firebase/firebase-client-android/2.3.1/be29b24233711c419ce935aa0a1b12ebc49d1c9a/firebase-client-android-2.3.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="be29b24233711c419ce935aa0a1b12ebc49d1c9a">
+        <dex dex="/Users/arjunbagla/Downloads/tutorials-master/android/ChatApplication/app/build/intermediates/pre-dexed/debug/firebase-client-android-2.3.1-fb57ee1bea53bd24cbbebc984a0d3032f2efc680.jar" />
+    </item>
+    <item
+        jar="/Users/arjunbagla/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-databind/2.2.2/3c8f6018eaa72d43b261181e801e6f8676c16ef6/jackson-databind-2.2.2.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="3c8f6018eaa72d43b261181e801e6f8676c16ef6">
+        <dex dex="/Users/arjunbagla/Downloads/tutorials-master/android/ChatApplication/app/build/intermediates/pre-dexed/debug/jackson-databind-2.2.2-c1d1f02340a72a2d295a0af9b3460e582b84b382.jar" />
+    </item>
+    <item
+        jar="/Users/arjunbagla/.gradle/caches/modules-2/files-2.1/com.firebase/tubesock/0.0.11/d37cb67277928cf59344b4196af8d9cee1f1a27c/tubesock-0.0.11.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="d37cb67277928cf59344b4196af8d9cee1f1a27c">
+        <dex dex="/Users/arjunbagla/Downloads/tutorials-master/android/ChatApplication/app/build/intermediates/pre-dexed/debug/tubesock-0.0.11-ba944d93db549d177f77ec0be4f63bdccc3f11e2.jar" />
+    </item>
+    <item
+        jar="/Users/arjunbagla/.gradle/caches/modules-2/files-2.1/com.firebase/firebase-client-jvm/2.3.1/4d53b7d6983247af02b8fe7e4228fff555a5e828/firebase-client-jvm-2.3.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="4d53b7d6983247af02b8fe7e4228fff555a5e828">
+        <dex dex="/Users/arjunbagla/Downloads/tutorials-master/android/ChatApplication/app/build/intermediates/pre-dexed/debug/firebase-client-jvm-2.3.1-29acfb061c59f8d2bfb189f1c3d34982f4ac7ecd.jar" />
+    </item>
+    <item
+        jar="/Users/arjunbagla/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-annotations/2.2.2/285cb9c666f0f0f3dd8a1be04e1f457eb7b15113/jackson-annotations-2.2.2.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="285cb9c666f0f0f3dd8a1be04e1f457eb7b15113">
+        <dex dex="/Users/arjunbagla/Downloads/tutorials-master/android/ChatApplication/app/build/intermediates/pre-dexed/debug/jackson-annotations-2.2.2-16a791e77640ad6a360e15d80458e5c895420b5c.jar" />
+    </item>
+
+</items>

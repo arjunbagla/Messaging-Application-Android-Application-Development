@@ -1,0 +1,116 @@
+<!--<
+  The root of the layout is a relative layout, which means that we specify the locations of
+  view elements as being relative to other view elements we have already created.
+  We define its width and height to be match_parent, which means it inherits the same
+  width and height as its "parent" view. Because this is the outermost view in our XML
+  file, and we are directly "inflating" this view to be the layout of an entire activity,
+  its parent can be thought of the screen itself.
+  The padding isn't that important. It just adds a few pixels on the left, right, top,
+  and bottom of the layout. You might eventually notice there's two ways to accomplish
+  something similar; android:padding and android:margin. Here's the difference: PADDING
+  adds pixels around the outside of a view. Margin adds pixels around the border of the
+  inside of a view.
+-->
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity"
+    >
+
+    <!--
+      If you think about building views from top to bottom, you might wonder why
+      we are starting with the bottom bar.
+      Think about it like this: If we define the list of messages (a listview) first,
+      how do we know how large it has to be? It can't be the size of the whole screen,
+      because then we wouldn't have any room at the bottom.
+      wrap_content is a bad idea because it can sometimes behave strangely with
+      listviews. wrap_content says "give it as much space as the view says it needs",
+      but because a listview has a scrolling element to it, couldn't it technically
+      only say it needs room for a single list item, then just scroll for the rest,
+      wasting a lot of space? maybe.
+      Instead, we start by defining the size we need for the bottom, then build
+      the listview in whatever is left. In LinearLayouts this would be impossible.
+      Next question: Why is the bottom bar enclosed inside its own RelativeLayout?
+      The main reason is just because its "cleaner". You could definitely design
+      it without it, but WITH it we can give the entire thing an ID, which
+      helps us understand why we have it. Plus we will end up using the ID later.
+      Finally, as a short explanation: We give this bottom bar an id with @+id/bottom_bar.
+      @+id/... means you are creating and assigning a new ID to this view.
+      @id/... means you are referencing an ID of another view which has already been
+      assigned. Importantly, the ORDER in which things are defined in an XML file
+      actually matters. It obviously matters for LinearLayouts because they are drawn
+      in the order you define them in. But for all layouts, its important because
+      you cannot reference the ID of a view before it is created.
+    -->
+    <RelativeLayout
+        android:id="@+id/bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:id="@+id/send_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="Send"
+            />
+
+        <!--
+          This part is kind of interesting.
+          The width of this element is set to wrap_content. At the start, the edittext
+          would have no text in it, and thus its width would essentially be 0. As you type,
+          it would grow. This is ugly and gross, but fortunately we have one more thing happening.
+          The combination of toLeftOf and alignParentLeft. Its almost like the edittext
+          is elastic and we are defining where we want its edges. What toLeftOf really says
+          is "line up the right edge of this view with the left edge of some other view".
+          And what alignParentLeft says is "align the left edge of this view with the left
+          edge of the parent view", which is the @id/bottom_bar relative layout, whose width
+          is match_parent, and thus is actually the left side of the screen itself.
+          Cool!
+        -->
+
+        <EditText
+            android:id="@+id/message_box"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/send_button"
+            android:layout_alignParentLeft="true"
+            android:hint="Message"
+            />
+
+    </RelativeLayout>
+
+    <!--
+      Finally the listview itself.
+      This uses the same "elastic" thing I explained above. We set the height
+      to wrap content, which normally wouldn't work, but because we have it
+      ABOVE the bottom bar and aligned with the parent top, it stretches to fill.
+      Its really ok to imagine wrap_content as being "magical" because it kind of is.
+      match_parent is easy to understand. You can also just pass raw pixel values in there,
+      which is a bad idea but sometimes useful. But wrap_content is "strange" to say the
+      least. It literally means "give this view as much room as it thinks it needs". If
+      you define it "elastically" like we did the edittext, the view starts
+      by saying "ok, im just an empty edittext, my width is 0, so im going to say I need 0",
+      but then it takes into consideration the toLeftOf and alignParentLeft; it calculates
+      what it thinks its width should be based on those rules, then reports THAT as
+      how much room it thinks it needs.
+      At least at a high level.
+    -->
+
+    <ListView
+        android:id="@+id/lv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/bottom_bar"
+        android:layout_alignParentTop="true"
+        android:transcriptMode="alwaysScroll"
+        />
+
+</RelativeLayout>
