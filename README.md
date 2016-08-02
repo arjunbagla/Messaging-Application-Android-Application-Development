@@ -1,4 +1,4 @@
-# Messaging-Application-Android-Application-Development
+# Messaging Application &mdash; Android Application Development
 The repository contains an `Instant Messaging Application`, as part of the `Android Application Development` collection that was created as an **independent project**. 
 
 The **Instant Messaging Application** built on **Android** platform allow the users to:
